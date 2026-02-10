@@ -34,10 +34,10 @@
 if (isset($_POST['calculer'])) {
 
     if (empty($_POST['nombre1']) || !isset($_POST['nombre2']) || empty($_POST['operation'])) {
-       echo $error = "Veuillez remplir tous les champs.";
+       echo  "Veuillez remplir tous les champs.";
     }
     else if (!is_numeric($_POST['nombre1']) || !is_numeric($_POST['nombre2'])) {
-       echo $error = "Veuillez saisir des nombres valides.";
+       echo  "Veuillez saisir des nombres valides.";
     }
     else {
         $nombre1 = $_POST['nombre1'];
@@ -51,7 +51,7 @@ if (isset($_POST['calculer'])) {
            echo $result = $nombre1 * $nombre2;
         } else if ($op == "div") {
             if ($nombre2 == 0) {
-                echo $error = "La division par zéro est impossible.";
+                echo  "La division par zéro est impossible.";
             } else{
                 echo $result = $nombre1 / $nombre2;
             }
@@ -62,4 +62,5 @@ if (isset($_POST['calculer'])) {
 ?>
 
 </body>
+
 </html>
